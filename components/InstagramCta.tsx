@@ -3,6 +3,7 @@
 import { Instagram } from "lucide-react";
 import { BRAND } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function InstagramCta() {
   return (
@@ -36,6 +37,15 @@ export default function InstagramCta() {
               FOLLOW FOR MORE
             </span>
           </a>
+        </Reveal>
+
+        <Reveal delay={0.12} className="mt-6">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <p className="text-[10.5px] font-bold tracking-[0.28em] text-white/35 uppercase">
+              Also on
+            </p>
+            <SocialLinks size="lg" ariaLabel="ICT Kiran social profiles" />
+          </div>
         </Reveal>
       </div>
     </section>

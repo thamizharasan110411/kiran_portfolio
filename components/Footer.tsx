@@ -1,5 +1,6 @@
 import { Instagram, MessageCircle } from "lucide-react";
 import { BRAND, DISCLAIMER, NAV_LINKS } from "@/lib/content";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 const FOOTER_LINKS = NAV_LINKS.filter((l) => l.href !== "#why-us");
 
@@ -24,25 +25,8 @@ export default function Footer() {
             <p className="mt-4 max-w-sm text-[13.5px] leading-relaxed text-white/45">
               Structured trading mentorship for CFD & Futures — from basics to profitable trader.
             </p>
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href={BRAND.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5 text-white/70 transition-all hover:border-gold-500/40 hover:text-gold-400"
-              >
-                <Instagram className="h-4.5 w-4.5" />
-              </a>
-              <a
-                href={BRAND.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5 text-white/70 transition-all hover:border-wa/40 hover:text-wa"
-              >
-                <MessageCircle className="h-4.5 w-4.5" />
-              </a>
+            <div className="mt-6">
+              <SocialLinks ariaLabel="ICT Kiran on social media" />
             </div>
           </div>
 

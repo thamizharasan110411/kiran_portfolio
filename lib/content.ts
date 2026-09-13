@@ -11,10 +11,31 @@ export const BRAND = {
     "Hi ICT Kiran, I'm interested in the Trading Mentorship Program.",
   instagram: "ict_kiran",
   instagramUrl: "https://instagram.com/ict_kiran",
+  telegramUrl: "https://t.me/mtc1006",
+  xUrl: "https://x.com/makkutrader06",
+  youtubeUrl: "https://youtube.com/@kirankumar-rz1br",
   whatsappUrl:
     "https://wa.me/919876543210?text=" +
     encodeURIComponent("Hi ICT Kiran, I'm interested in the Trading Mentorship Program."),
 } as const;
+
+export type Social = {
+  id: "instagram" | "telegram" | "x" | "youtube";
+  label: string;
+  handle: string;
+  href: string;
+};
+
+/**
+ * Social profiles shown in the footer and alongside the Instagram section.
+ * Edit the URLs in BRAND above to point at new handles.
+ */
+export const SOCIALS: Social[] = [
+  { id: "instagram", label: "Instagram", handle: `@${BRAND.instagram}`, href: BRAND.instagramUrl },
+  { id: "telegram", label: "Telegram", handle: "mtc1006", href: BRAND.telegramUrl },
+  { id: "x", label: "X", handle: "@makkutrader06", href: BRAND.xUrl },
+  { id: "youtube", label: "YouTube", handle: "@kirankumar-rz1br", href: BRAND.youtubeUrl },
+];
 
 export type NavLink = { label: string; href: string };
 
@@ -102,7 +123,7 @@ export const TIMELINE = [
   { no: "03", label: "Psychology" },
   { no: "04", label: "Risk Management" },
   { no: "05", label: "Funded Account Approach" },
-  { no: "06", label: "Payout Process" },
+  { no: "06", label: "Premium Indicator Access" },
 ];
 
 export type Plan = {
