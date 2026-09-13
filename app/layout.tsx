@@ -15,7 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ictkiran.example.com"),
+  metadataBase: new URL("https://kiranportfolio-kappa.vercel.app"),
   title: {
     default: "ICT Kiran — Trading Mentorship Program | CFD & Futures",
     template: "%s | ICT Kiran",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://ictkiran.example.com",
+    url: "https://kiranportfolio-kappa.vercel.app",
     siteName: "ICT Kiran",
     title: "ICT Kiran — Trading Mentorship Program | CFD & Futures",
     description:
@@ -55,6 +55,7 @@ export const viewport: Viewport = {
   themeColor: "#050607",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

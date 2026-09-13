@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 /** Deterministic pseudo-random so SSR and client match */
@@ -23,6 +24,11 @@ const POINTS = Array.from({ length: 40 }, (_, i) => {
 export default function ChartBackground({ className = "" }: { className?: string }) {
   const reduce = useReducedMotion();
 
+  const uid = useId();
+  const cgId = `cg${uid}`;
+  const ccId = `cc${uid}`;
+  const lineFillId = `lf${uid}`;
+
   return (
     <svg
       aria-hidden="true"
@@ -31,15 +37,15 @@ export default function ChartBackground({ className = "" }: { className?: string
       preserveAspectRatio="xMidYMid slice"
     >
       <defs>
-        <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={cgId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#d4af37" stopOpacity="0.85" />
           <stop offset="100%" stopColor="#b8952e" stopOpacity="0.4" />
         </linearGradient>
-        <linearGradient id="cc" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={ccId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#48d6ee" stopOpacity="0.8" />
           <stop offset="100%" stopColor="#1591a8" stopOpacity="0.4" />
         </linearGradient>
-        <linearGradient id="lineFill" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={lineFillId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#d4af37" stopOpacity="0.12" />
           <stop offset="100%" stopColor="#d4af37" stopOpacity="0" />
         </linearGradient>
@@ -59,20 +65,20 @@ export default function ChartBackground({ className = "" }: { className?: string
       <motion.polyline
         points={POINTS}
         fill="none"
-        stroke="url(#cg)"
+        stroke={`url(#${cgId})`}
         strokeWidth="2"
         strokeLinejoin="round"
         initial={reduce ? false : { pathLength: 0, opacity: 0 }}
         animate={{ pathLength: 1, opacity: 1 }}
         transition={{ duration: 2.6, ease: "easeInOut", delay: 0.4 }}
       />
-      <polygon points={`0,400 ${POINTS} 1440,400`} fill="url(#lineFill)" />
+      <polygon points={`0,400 ${POINTS} 1440,400`} fill={`url(#${lineFillId})`} />
 
       {/* candles */}
       <g transform="translate(0,300)">
         {CANDLES.map((c, i) => {
           const x = 40 + i * 64;
-          const color = c.up ? "url(#cg)" : "url(#cc)";
+          const color = c.up ? `url(#${cgId})` : `url(#${ccId})`;
           const anim = reduce
             ? {}
             : { scaleY: [0.82, 1.12, 0.9], opacity: [0.8, 1, 0.8] };

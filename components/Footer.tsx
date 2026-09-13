@@ -1,5 +1,3 @@
-"use client";
-
 import { Instagram, MessageCircle } from "lucide-react";
 import { BRAND, DISCLAIMER, NAV_LINKS } from "@/lib/content";
 
