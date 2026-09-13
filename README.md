@@ -89,7 +89,8 @@ lib/
 
 ## Notes
 
-- All WhatsApp links point to `+91 98765 43210` with a pre-filled message
+- All WhatsApp links point to `+91 97908 11408` with a pre-filled message
+- The WhatsApp number and pre-filled message are set once in `lib/content.ts` (`WHATSAPP_NUMBER` / `WHATSAPP_MESSAGE`) and used by every CTA
 - No fake stats, testimonials, or guaranteed-profit claims
 - Disclaimer is included in the footer
 - `prefers-reduced-motion` is respected for accessibility

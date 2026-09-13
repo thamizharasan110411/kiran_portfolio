@@ -1,3 +1,10 @@
+/** WhatsApp number in international format, digits only (no + or spaces). */
+const WHATSAPP_NUMBER = "919790811408";
+
+/** Pre-filled WhatsApp message. */
+const WHATSAPP_MESSAGE =
+  "Hi ICT Kiran, I'm interested in the Trading Mentorship Program.";
+
 export const BRAND = {
   name: "ICT KIRAN",
   tagline: ["LEARN", "TRADE", "GROW"],
@@ -5,18 +12,17 @@ export const BRAND = {
   program: "TRADING MENTORSHIP PROGRAM",
   markets: "CFD | FUTURES",
   positioning: "From Basics to Profitable Trader",
-  whatsapp: "+91 98765 43210",
-  whatsappRaw: "919876543210",
-  whatsappMessage:
-    "Hi ICT Kiran, I'm interested in the Trading Mentorship Program.",
+  whatsapp: "+91 97908 11408",
+  whatsappRaw: WHATSAPP_NUMBER,
+  whatsappMessage: WHATSAPP_MESSAGE,
   instagram: "ict_kiran",
   instagramUrl: "https://instagram.com/ict_kiran",
   telegramUrl: "https://t.me/mtc1006",
   xUrl: "https://x.com/makkutrader06",
   youtubeUrl: "https://youtube.com/@kirankumar-rz1br",
-  whatsappUrl:
-    "https://wa.me/919876543210?text=" +
-    encodeURIComponent("Hi ICT Kiran, I'm interested in the Trading Mentorship Program."),
+  whatsappUrl: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    WHATSAPP_MESSAGE
+  )}`,
 } as const;
 
 export type Social = {
@@ -291,7 +297,7 @@ export const FAQS = [
   },
   {
     q: "How can I enroll?",
-    a: "Tap any 'Enroll' button or message us on WhatsApp at +91 98765 43210. We'll guide you through the next steps personally.",
+    a: `Tap any 'Enroll' button or message us on WhatsApp at ${BRAND.whatsapp}. We'll guide you through the next steps personally.`,
   },
   {
     q: "Is profit guaranteed?",
