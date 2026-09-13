@@ -93,3 +93,4 @@ lib/
 - No fake stats, testimonials, or guaranteed-profit claims
 - Disclaimer is included in the footer
 - `prefers-reduced-motion` is respected for accessibility
+"# kiran_portfolio" 
