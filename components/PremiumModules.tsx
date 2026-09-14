@@ -26,7 +26,7 @@ export default function PremiumModules() {
             <Reveal key={m.title} delay={i * 0.1}>
               <article className="card-hover group relative h-full overflow-hidden rounded-2xl border border-gold-500/30 bg-gradient-to-b from-[#100d07] to-[#08090c] p-8 transition-colors duration-300 hover:border-gold-500/60 hover:shadow-[0_30px_80px_-30px_rgba(212,175,55,0.5)]">
                 <div
-                  className="pointer-events-none absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gold-500/10 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+                  className="pointer-events-none absolute -top-16 -right-16 h-40 w-40 rounded-full bg-[radial-gradient(closest-side,rgba(212,175,55,0.18),rgba(212,175,55,0.06)_55%,transparent)] transition-opacity duration-500 group-hover:opacity-100"
                   aria-hidden="true"
                 />
                 <div className="mb-7 flex items-center justify-between">

@@ -11,7 +11,7 @@ export default function About() {
     <section id="about" className="relative overflow-x-clip py-24 sm:py-28">
       {/* faint side glow */}
       <div
-        className="pointer-events-none absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full bg-gold-500/6 blur-[120px]"
+        className="pointer-events-none absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(212,175,55,0.13),rgba(212,175,55,0.05)_55%,transparent)]"
         aria-hidden="true"
       />
 

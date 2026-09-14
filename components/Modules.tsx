@@ -22,7 +22,7 @@ export default function Modules() {
   return (
     <section id="mentorship" className="relative overflow-x-clip py-24 sm:py-28">
       <div
-        className="pointer-events-none absolute top-0 right-0 h-[380px] w-[380px] rounded-full bg-cyan-500/6 blur-[120px]"
+        className="pointer-events-none absolute top-0 right-0 h-[380px] w-[380px] rounded-full bg-[radial-gradient(closest-side,rgba(34,184,212,0.13),rgba(34,184,212,0.05)_55%,transparent)]"
         aria-hidden="true"
       />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">

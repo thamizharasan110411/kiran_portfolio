@@ -66,7 +66,10 @@ body {
   background: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  /* `clip`, not `hidden`: `overflow-x: hidden` computes overflow-y to `auto`,
+     turning <body> into a nested scroll container. `clip` gives the same
+     horizontal clipping without that side effect. */
+  overflow-x: clip;
 }
 
 ::selection {
@@ -94,11 +97,13 @@ body {
   inset: -20%;
   z-index: 0;
   pointer-events: none;
+  /* Softness is baked into the gradient stops instead of `filter: blur()`.
+     A blurred layer here covered multiple viewports and was re-rasterized
+     continuously, which let the compositor paint dark/unpainted tiles. */
   background:
-    radial-gradient(42% 34% at 22% 26%, rgba(212, 175, 55, 0.16), transparent 65%),
-    radial-gradient(36% 30% at 78% 22%, rgba(34, 184, 212, 0.13), transparent 65%),
-    radial-gradient(40% 34% at 62% 82%, rgba(212, 175, 55, 0.1), transparent 65%);
-  filter: blur(40px);
+    radial-gradient(42% 34% at 22% 26%, rgba(212, 175, 55, 0.16), rgba(212, 175, 55, 0.06) 38%, transparent 72%),
+    radial-gradient(36% 30% at 78% 22%, rgba(34, 184, 212, 0.13), rgba(34, 184, 212, 0.05) 38%, transparent 72%),
+    radial-gradient(40% 34% at 62% 82%, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.04) 38%, transparent 72%);
   animation: auraShift 16s ease-in-out infinite alternate;
 }
 @keyframes auraShift {
@@ -197,11 +202,5 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .aura {
-    filter: blur(28px);
   }
 }

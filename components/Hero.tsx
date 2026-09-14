@@ -98,7 +98,7 @@ export default function Hero() {
         >
           {/* gold ambient glow */}
           <div
-            className="absolute -inset-8 rounded-[32px] bg-[radial-gradient(60%_55%_at_50%_45%,rgba(212,175,55,0.14),transparent_70%)] blur-2xl"
+            className="absolute -inset-8 rounded-[32px] bg-[radial-gradient(62%_58%_at_50%_45%,rgba(212,175,55,0.17),rgba(212,175,55,0.06)_45%,transparent_76%)]"
             aria-hidden="true"
           />
 

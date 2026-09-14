@@ -47,7 +47,10 @@ export default function FloatingCta() {
             animate={{ y: 0 }}
             exit={{ y: 90 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#050607]/92 px-4 pt-3 pb-3 backdrop-blur-xl sm:hidden" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+            // Deliberately no backdrop-filter: the bar is already 92% opaque so
+            // the blur is imperceptible, and a second fixed, full-width blurred
+            // layer is a known source of black flashing while scrolling.
+            className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#050607]/92 px-4 pt-3 pb-3 sm:hidden" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
           >
             <div className="flex items-center gap-3">
               <div className="min-w-0 flex-1">

@@ -17,7 +17,7 @@ export default function InstagramCta() {
             className="group relative flex flex-col items-center gap-5 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#120d14] via-[#0b0c10] to-[#071018] px-8 py-12 text-center transition-all duration-500 hover:border-gold-500/40 hover:shadow-[0_30px_80px_-30px_rgba(212,175,55,0.4)] sm:flex-row sm:justify-between sm:text-left"
           >
             <div
-              className="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-gradient-to-br from-gold-500/12 to-cyan-500/12 blur-3xl"
+              className="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-[radial-gradient(closest-side,rgba(212,175,55,0.14),rgba(34,184,212,0.1)_60%,transparent)]"
               aria-hidden="true"
             />
             <div className="flex items-center gap-5">

@@ -58,7 +58,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      // Transition only the properties that actually change: transitioning
+      // `backdrop-filter` on a fixed, full-width element left it stuck at
+      // blur(0px) and re-rasterized the backdrop on every scroll frame.
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow] duration-500 ${
         scrolled
           ? "border-b border-white/5 bg-[#050607]/78 backdrop-blur-xl shadow-[0_18px_50px_-30px_rgba(0,0,0,0.9)]"
           : "border-b border-transparent bg-transparent"

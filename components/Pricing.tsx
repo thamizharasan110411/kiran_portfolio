@@ -34,7 +34,7 @@ export default function Pricing() {
                 >
                   {featured && (
                     <div
-                      className="pointer-events-none absolute -inset-1 -z-10 rounded-[30px] bg-[radial-gradient(60%_50%_at_50%_0%,rgba(212,175,55,0.22),transparent_70%)] blur-xl"
+                      className="pointer-events-none absolute -inset-1 -z-10 rounded-[30px] bg-[radial-gradient(58%_48%_at_50%_0%,rgba(212,175,55,0.26),rgba(212,175,55,0.08)_50%,transparent_78%)]"
                       aria-hidden="true"
                     />
                   )}
